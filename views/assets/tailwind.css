@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-down {
+    0% {
+        max-height: 0; /* Sesuaikan dengan tinggi maksimum tabel */
+        opacity: 0;
+    }
+    100% {
+        max-height: 1000px; /* Sesuaikan dengan tinggi maksimum tabel */
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        max-height: 1000px; /* Sesuaikan dengan tinggi maksimum tabel */
+        opacity: 1;
+    }
+    100% {
+        max-height: 0; /* Sesuaikan dengan tinggi maksimum tabel */
+        opacity: 0;
+    }
+}
+
+.animate-slide-down {
+    animation: slide-down 1s forwards;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.5s forwards;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #F1DEC6; /* Sesuaikan dengan warna latar belakang tabel */
+    z-index: 1;
+}
+
+.truncate-text {
+    display: inline-block;
+    max-width: 100ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the text */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
