@@ -12,9 +12,8 @@
 		}
 		public static function setHeader($header){
 			echo '<div class="w-full h-full p-4 bg-green-600">';
-			echo "<h1 class=\"text-white text-2xl\">$header</h1>";   
+			echo "<h1 class=\"text-white text-2xl\">$header</h1>";
 			echo "</div>";
-
 		}
 		public static function setFooter($footer){
 			echo '<div class="w-full h-full p-4 bg-green-400">';
