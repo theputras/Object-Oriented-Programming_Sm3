@@ -5,7 +5,7 @@ $username = "root";
 $password = "tpmroot";
 $dbName = "tugas";
 
-$connection = new mysqli($serverName, $username, $password, $dbName);
+$connection = new mysqli($serverName, $username, $password);
 
 // Check connection
 if ($connection->connect_error) {

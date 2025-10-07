@@ -14,5 +14,5 @@ $bonus = hitung_bonus($beli);
 
 echo "Anda mendapatkan $bonus bonus barang gratis!" . "\n";
 
-echo "Jumlah barang yang dibayar: " . ($beli - $bonus);
+echo "Jumlah barang yang dibayar: " . ($beli + $bonus);
 ?>
